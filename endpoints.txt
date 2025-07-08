@@ -1,0 +1,137 @@
+http://localhost:8080/api/users/me
+
+Admin Login And User Login
+
+{
+    "id": 2,
+    "email": "siddha@gmail.com",
+    "name": "Siddhi Kate",
+    "phone": "9876543210",
+    "address": "Pune"
+}
+
+http://localhost:8080/api/users/1
+User Access
+{
+    "id": 1,
+    "email": "admin@gmail.com",
+    "name": "Siddhi Kate",
+    "phone": "9876543210",
+    "address": "Pune"
+}
+
+http://localhost:8080/api/users/all
+Admin Access
+
+http://localhost:8080/api/vehicles
+User Access
+{
+    "id": 1,
+    "make": "Honda",
+    "model": "Corrolla",
+    "regYear": 2025,
+    "registrationNumber": "MH1234"
+}
+
+http://localhost:8080/api/service-centers
+Admin Access
+{
+    "id": 1,
+    "name": "Elite Service",
+    "location": "Aundh",
+    "contact": "987654523"
+}
+
+http://localhost:8080/api/service-centers
+Admin Access
+{
+    "id": 2,
+    "name": "Elite Service",
+    "location": "Aundh",
+    "contact": "987654523"
+}
+
+http://localhost:8080/api/service-centers/1/mechanics
+Admin Access
+{
+    "id": 1,
+    "name": "john Doe",
+    "expertise": "Engine Repair",
+    "serviceCenter": {
+        "id": 1,
+        "name": "Elite Service",
+        "location": "Aundh",
+        "contact": "987654523"
+    }
+}
+
+http://localhost:8080/api/service-centers/1/service-types
+Admin Access
+{
+    "id": 1,
+    "description": "handle Repair",
+    "price": 250.0,
+    "serviceCenter": {
+        "id": 1,
+        "name": "Elite Service",
+        "location": "Aundh",
+        "contact": "987654523"
+    }
+}
+
+http://localhost:8080/api/bookings
+User Access
+{
+    "id": 1,
+    "userId": 1,
+    "vehicleId": 2,
+    "serviceCenterId": 1,
+    "bookingDate": "2025-07-01",
+    "status": "PENDING",
+    "user": {
+        "id": 1,
+        "name": "Siddhi Kate",
+        "email": "admin@gmail.com"
+    },
+    "vehicle": {
+        "id": 2,
+        "make": "Honda",
+        "model": "Corrolla",
+        "regYear": 2025,
+        "registrationNumber": "MH1234"
+    },
+    "serviceCenter": {
+        "name": "Elite Service",
+        "location": "Aundh",
+        "contact": "987654523"
+    }
+}
+
+http://localhost:8086/api/invoices
+Admin Access
+{
+  "invoiceId": 1,
+  "userResponse": {
+    "id": 1,
+    "name": "Siddhi Kate",
+    "email": "admin@gmail.com"
+  },
+  "vehicleResponse": {
+    "id": 2,
+    "model": "Corrolla",
+    "registrationNumber": "MH1234"
+  },
+  "booking": {
+    "id": 1,
+    "userId": 1,
+    "vehicleId": 2,
+    "bookingDate": "2025-07-01",
+    "status": "PENDING"
+  },
+  "serviceType": {
+    "description": "handle Repair",
+    "price": 250
+  },
+  "totalAmount": 250,
+  "paymentStatus": "UNPAID"
+}
